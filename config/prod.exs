@@ -11,6 +11,6 @@ config :logger, level: :info
 
 config :example_api, ExampleApi.Repo,
   adapter: Ecto.Adapters.Postgres,
-  System.get_env("DATABASE_URL"),
+  url: System.get_env("DATABASE_URL"),
   pool_size: 20,
   ssl: true
