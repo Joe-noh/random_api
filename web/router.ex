@@ -7,5 +7,7 @@ defmodule ExampleApi.Router do
 
   scope "/api", ExampleApi do
     pipe_through :api
+
+    resources "/microposts", MicropostController, only: [:index]
   end
 end
