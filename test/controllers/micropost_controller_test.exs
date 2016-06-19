@@ -10,6 +10,6 @@ defmodule ExampleApi.MicropostControllerTest do
       |> get(micropost_path(conn, :index))
       |> json_response(200)
 
-    assert json["data"] |> length == 3
+    assert length(json["data"]) > 0
   end
 end
