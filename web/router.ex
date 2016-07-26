@@ -9,6 +9,7 @@ defmodule ExampleApi.Router do
     pipe_through :api
 
     resources "/microposts", MicropostController, only: [:index]
+    resources "/characters", CharacterController, only: [:index]
     resources "/auth", AuthController, singleton: true, only: [:show]
   end
 end
