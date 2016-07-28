@@ -5,6 +5,12 @@ defmodule ExampleApi.HogeFuga do
     |> Enum.join
   end
 
+  def generate(:alphabet) do
+    random_times(5)
+    |> Enum.map(fn _ -> ~w[ho ge fu ga] |> Enum.random end)
+    |> Enum.join
+  end
+
   defp random_times(max \\ 70) do
     Range.new 1, Enum.random(1..max)
   end
