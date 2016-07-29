@@ -11,7 +11,7 @@ defmodule ExampleApi.CharacterController do
     %{
       name: Faker.Name.name,
       level: Enum.random(1..100),
-      image_url: "https://robohash.org/#{HogeFuga.generate(:alphabet)}.png?set=set3"
+      image_url: "https://robohash.org/#{HogeFuga.generate(:alphabet)}.png?set=set3&size=100x100"
     }
   end
 end
